@@ -1,0 +1,43 @@
+log1:
+  id:   1
+  mole_feature_id: 4
+  user_id:         1
+  params:          "---\n:arg1: val1\n:arg2: val2"
+  created_at: <%= Time.gm( 2007, "apr", 27, 6, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>   
+  updated_at: <%= Time.gm( 2007, "apr", 27, 6, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>  
+perf:
+  id:   2
+  mole_feature_id: 2
+  user_id:         1
+  params:          "---\n:arg1: val1\n:arg2: val2"
+  created_at: <%= Time.gm( 2007, "apr", 27, 7, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>   
+  updated_at: <%= Time.gm( 2007, "apr", 27, 7, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>    
+perf1:
+  id:   3
+  mole_feature_id: 2
+  user_id:         1
+  params:          "---\n:arg1: val1\n:arg2: val2"
+  created_at: <%= Time.gm( 2007, "apr", 27, 7, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>   
+  updated_at: <%= Time.gm( 2007, "apr", 27, 7, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>    
+exception:
+  id:   4
+  mole_feature_id: 3
+  user_id:         1
+  params:          "---\n:arg1: val1\n:arg2: val2"
+  created_at: <%= Time.gm( 2007, "apr", 27, 8, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>   
+  updated_at: <%= Time.gm( 2007, "apr", 27, 8, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>      
+no_args:
+  id:   5
+  mole_feature_id: 4
+  user_id:         1
+  params:          "no args"
+  created_at: <%= Time.gm( 2007, "apr", 27, 9, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>   
+  updated_at: <%= Time.gm( 2007, "apr", 27, 9, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>      
+log2:
+  id:   6
+  mole_feature_id: 4
+  user_id:         1
+  params:          "---\n:arg1: val1\n:arg2: val2"
+  created_at: <%= Time.gm( 2007, "apr", 27, 10, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>   
+  updated_at: <%= Time.gm( 2007, "apr", 27, 10, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>  
+  

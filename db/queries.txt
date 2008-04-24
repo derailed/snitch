@@ -1,0 +1,20 @@
+select user_id, u.username, mole_feature_id, f.name, mole_logs.created_at FROM mole_logs LEFT OUTER JOIN mole_features f ON f.id = mole_logs.mole_feature_id LEFT OUTER JOIN users u ON u.id = mole_logs.user_id WHERE (mole_logs.created_at > '2007-04-16 02:02:22' and user_id = 884) ORDER BY mole_logs.created_at desc;
+
+select u.username, f.name, count(mole_feature_id) as cnt, mole_logs.created_at 
+from mole_logs 
+join users u on u.id = user_id
+join mole_features f on f.id = mole_feature_id 
+where mole_logs.created_at > '2007-04-14 00:00:01' and 
+mole_feature_id != 26 and 
+mole_feature_id != 12 and 
+user_id = 811
+group by mole_feature_id 
+order by cnt;
+
+select u.username, count(user_id) as cnt 
+from mole_logs 
+join users u on u.id = user_id 
+where mole_logs.created_at > '2007-04-14 00:00:01' and 
+mole_feature_id != 26 and mole_feature_id != 12 
+group by user_id 
+order by cnt;

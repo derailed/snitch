@@ -1,0 +1,33 @@
+<div id="log_<%=log.id%>" 
+     class="mole_entry" style="background:<%=log_color log %>;" 
+     onclick="Element.toggle( 'log_details_<%=log.id%>');"
+     onmouseover="$('log_<%=log.id%>').style.background='#6C6D6D';" 
+     onmouseout="$('log_<%=log.id%>').style.background='<%=log_color( log )%>'">                      
+  <div class="log log_icon">
+    <%= tag_img log %>
+  </div>	
+  <div class="log log_icon">
+    <%= browser_img log %>
+  </div>	
+  <div class="log log_user">
+    <%= format_user log.mole_user %>
+  </div>  
+  <div class="log log_ip">
+	  <%= log.ip_address%>
+	</div>
+  <div class="log log_feature">
+    <%= format_feature_name log.mole_feature.name %>
+  </div>
+  <div class="log log_context">
+    <%= log.mole_feature.context %>
+  </div>
+  <div class="log log_time">
+    <%= format_time log.created_at, @now  %>
+  </div>
+  <div id="log_details_<%=log.id%>" class="log log_params" style="clear:left;display:none">
+    <%= format_params log.params%>
+  </div>
+  <script>
+     display_details( 'log_details_<%=log.id%>' );
+  </script>
+</div>

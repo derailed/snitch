@@ -1,0 +1,11 @@
+<!-- Displays feature charts -->
+<% for feature in @features%>
+	<%= ziya_chart( url_for( :controller => 'graphs', 
+	                         :action     => 'chart_feature', 
+	                         :feature    => feature.name ), 
+				          :id      => feature.name, 
+				          :bgcolor => "transparent", 
+				          :width   => 300, 
+				          :height  => 150 ) %>	   
+<% end %>                                  
+                                

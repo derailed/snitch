@@ -1,0 +1,4 @@
+<%= chart :column %>
+  <%=comp :live_update %>
+     url:   <%=@options[:url]%>
+     delay: <%=@options[:delay]%> 

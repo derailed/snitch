@@ -1,0 +1,9 @@
+---
+user: fgaliana
+cwd:  ~/work/imhotep/swf_plugin/plugins/mole/samples/consoles/snitch
+port: "4000"
+environment: development
+group: fgaliana
+address: 127.0.0.1
+pid_file: log/mongrel.pid 
+servers: 1

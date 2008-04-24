@@ -1,0 +1,18 @@
+xml.mole do
+  xml.live_users @live_users.size
+  xml.tops do
+    for top in @tops do
+      xml.top do    
+        xml.id     top.mole_feature_id       
+        xml.title  top.name 
+        xml.count  top.count    
+        prev_count = @data[top.mole_feature_id.to_s]
+        if prev_count.nil?
+          xml.update -1         
+        else
+          xml.update top.count.to_i - prev_count 
+        end
+      end
+    end
+  end                          
+end

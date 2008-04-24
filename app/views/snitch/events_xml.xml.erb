@@ -1,0 +1,15 @@
+xml.mole do
+  xml.live_users @live_users.size
+  xml.events do
+    for log in @logs do
+      xml.event do    
+        xml.id        log.id
+        xml.user      format_user( log.user )
+        xml.new_post  ! @ids.include?( log.id.to_s )
+        xml.feature   format_feature_name( log.mole_feature.name )
+        xml.timestamp log.created_at.strftime( "%a %b %d %Y %H:%M:%S (%Z)" )
+        xml.params    format_flat_params( log.params )
+      end
+    end
+  end                          
+end

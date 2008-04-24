@@ -1,0 +1,213 @@
+body {
+	margin:      0px;
+	padding:     0px;
+	font-family: helvetica, arial, 'bitstream vera sans', verdana, sans-serif;
+	font-size:   12px;
+	color:       #fd9c3c;
+	background:  #2d2d2d;
+}
+	
+/* --------------------------------------------------------------------------*/
+/*                                                                    Header */
+div#header {
+	margin:      0;
+	padding:     0;
+	width:       100%;
+	height:      83px;
+	background:  transparent url("/images/mole_header_bg.png" ) repeat-x top left;
+	border:      none;
+}
+div#mole_logo {
+	background: transparent url("/images/mole_logo.gif" ) no-repeat top left;
+	position:   absolute;
+	top:        0px;
+	left:       0px;
+	width:      250px;
+	height:     81px;  
+	border:     none;
+}      
+div#title {
+	position:  absolute;
+	left:      200px;
+	top:       50px;
+	font-size: 24pt;
+	color:     gray;
+}            
+
+/* --------------------------------------------------------------------------*/
+/*                                                                      Main */
+div#nav {
+  text-align:right;
+  position:absolute;
+  top:32px;
+  right:20px
+}                    
+
+div#filter_panel {
+	background: #4c4d4d;
+/*	height:     31px;*/
+	border:     1px gray solid;
+}             
+
+div#top_panel {
+	margin-top: 10px;
+	overflow:   auto;
+	background: #4c4d4d;
+	border:     1px gray solid;
+} 
+      
+div#content {
+	clear:      left;
+	margin-top: 10px;
+}                                     
+
+div#main {
+	margin-left:  15px;
+	margin-top:   1px;
+	text-align:   left;  
+	margin-right: 15px;
+}
+
+/* --------------------------------------------------------------------------*/
+/*                                                             Global Loader */
+div#loader {
+	position: absolute;
+	right:    20px;
+	top:      60px;
+}
+span#loader_text {
+  color:        orange;
+  font-weight:  bold;
+  margin-right: 10px;
+}
+
+/* --------------------------------------------------------------------------*/
+/*                                                              Global Links */
+a {
+	color:           #66cc99;
+	text-decoration: none;
+	font-variant:    small-caps;
+	font-weight:     bold; 
+	font-size:       14px;
+	font-family:     tahoma, arial, helvetica, sans-serif;
+}
+a:hover {
+	text-decoration: underline;  
+	color          : #fd9c3c;
+}
+a:visited {
+}   
+
+/* --------------------------------------------------------------------------*/
+/*                                                                     Forms */
+fieldset {
+	border: none;
+  float: left;
+}      
+
+/* --------------------------------------------------------------------------*/
+/*                                                                No Results */                                                                   
+div#no_result {
+	text-align: center;
+	color:      red;
+	font-size:  16px;
+	margin-top: 100px;
+}             
+
+/* --------------------------------------------------------------------------*/
+/*                                                                 Log Entry */
+div.mole_entry {
+	font-size:     11px;
+	border-top:    1px #ccc solid;
+	margin-bottom: 2px;
+	clear:         left;
+	overflow:      auto;
+}                
+      
+img.image_tag {
+	width:  16px;
+	height: 16px;
+	border: none;
+}         
+      
+div.log {
+	float:      left;
+	margin-top: 2px;
+}            
+
+div.icon {
+	min-width: 5%; 
+	max-width: 5%;
+	height:    16px;
+	width:     16px;     
+}     
+
+div.log_user {
+	color:      #ccc;
+	min-width:  25%;
+	max-width:  25%;       
+	margin-left: 10px;
+}
+
+div.log_ip {
+	color:      #ccc;
+	min-width:  15%;
+	max-width:  15%;        	
+}
+
+div.log_feature {
+	color:      #ff6666;
+	min-width:  20%;
+	max-width:  20%;        	
+}                
+
+div.log_context {
+	color:      #259AEE;
+	min-width:  20%;
+	max-width:  20%;        	
+}                
+
+div.log_time {
+	color:          #90cc44;
+	float:          right;
+	text-align:     right;    
+	vertical-align: top;
+  min-width:      10%;
+	max-width:      10%; 
+}                 
+
+div.log_params {
+	clear:       left;
+	margin-left: 45px;
+	min-width:   90%;
+	max-width:   90%;       
+}
+                
+/* --------------------------------------------------------------------------*/
+/*                                                                 Top Panel */
+div.tops {
+	clear:        left;
+	color:        #ccc;
+	margin-right: 10px;
+	margin-top:   2px;
+}              
+div.top_name {
+	min-width: 85%;
+	float:     left;
+}     
+div.top_feature {
+	min-width: 35%;
+	float:     left;
+}     
+div.top_context {
+	min-width: 50%;
+	float:     left;
+}                        
+div.top_count {
+	min-width:  15%;
+	text-align: right;
+}
+div.top_title {
+	font-size:     14px;
+	border-bottom: 1px #ccc solid;
+}

@@ -1,0 +1,16 @@
+<div style="overflow:auto;margin:10px;">
+	<div id="top_features" style="float:left;width:35%;margin-right:10px">
+		<div class="top_title">Features Usage [<%=@top_features.size%>]</div>
+		<%=render :partial => 'top_feature', :collection => @top_features %>
+	</div>
+
+	<div id="top_users" style="float:left;overflow:auto;width:35%;margin-right:10px;">
+		<div class="top_title">User Interactions [<%=@top_users.size%>]</div>	
+		<%=render :partial => 'top_user', :collection => @top_users %>
+	</div>    
+	
+	<div id="live_users" style="overflow:auto;width:25%;">
+		<div class="top_title">Live Users [<%=@live_users.size%>]</div>	
+		<%=render :partial => 'live_user', :collection => @live_users %>
+	</div>    	             
+</div>

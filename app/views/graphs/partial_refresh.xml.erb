@@ -1,0 +1,17 @@
+xml.chart do
+  xml.live_update( :url=> @url, :delay => @delay )
+  xml.chart_data do
+    xml.row do
+      xml.null
+      @date_series.each do |c|
+        xml.string( c )
+      end
+    end
+    xml.row do
+      xml.string( @title )      
+      @series.each do |c|
+         xml.number( c )
+      end
+    end  
+  end
+end    

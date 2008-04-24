@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<title>Snitch</title>
+	<%= stylesheet_link_tag 'mole' %>
+	<%= javascript_include_tag :defaults %>		
+	<link type="image/x-icon" href="/images/favicon.ico" rel="shortcut icon"/>
+</head>
+
+<body id="body" onunload="refresh_con=false;">
+	<div id="header">
+		<div id="mole_logo"></div> 
+	</div>
+	          	
+	<div id="loader" style="display:none">
+	  <span id="loader_text">Refreshing...</span>
+	  <%=image_tag('rotor.gif', :alt => "") %>
+  </div> 
+       
+  <div id="nav">             
+	  <%= link_to "Snitch", :controller => "snitch"%>
+  </div>
+				 
+	<div id="main"> 		          
+		<div id="content">
+			<%= yield %>
+		</div>
+	</div>    	  
+</body>
+</html>

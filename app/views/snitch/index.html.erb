@@ -1,0 +1,9 @@
+<div id="counts" style="text-align:right;display:<%=@logs.size == 0 ? 'none' : ''%>;">
+	<%= render :partial => 'counts'%>		
+</div>
+
+<div id="logs" style="overflow:auto">  
+  <%=render :partial => 'log', :collection => @logs if @logs.size > 0 %>
+</div>  
+
+<%= render :partial => 'no_results'%>   

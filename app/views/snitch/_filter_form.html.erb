@@ -1,0 +1,38 @@
+<% form_remote_tag :url => { :action => 'filter' }, 
+    :loading  => "Element.show('loader')", 
+    :complete => "Element.hide('loader')",
+    :html => { :id => 'filter_form', :style => "overflow:auto;" } do %>
+
+  <fieldset>
+		<div class="field">
+			<label for="range" style="width:150;display:block">Time range:</label>                        
+			<select id="range" name="filter[range]">
+		    <%= options_for_select SnitchHelper::TIME_RANGE, @filter.range %>
+		  </select>
+		</div>		
+  </fieldset>	                
+
+	<div class="field" style="float:right;margin-top:5px;margin-right:10px;">		
+	  <%= submit_tag "Filter" %> 		 
+		<%= button_to_function( "Dismiss", "Element.hide('filter_panel');" ) %>     		 
+	</div>
+
+	<fieldset style="clear:left;">
+		<div class="field">
+			<label for="feature" style="width:150;display:block">Features:</label>
+			<select id="feature" name="filter[feature]">
+		    <%= options_for_select @features, @filter.feature %>
+		  </select>			
+		</div>		
+	</fieldset>
+	<fieldset>
+		<div class="field">
+			<label for="user" style="width:150;display:block">Users:</label>
+			<select id="user" name="filter[user]">
+				<option value="0" <%=@filter.user_id == 0 ? "selected='selected'" : ""%>>All</option>
+		    <%= options_for_select @users, @filter.user_id %>
+		  </select>			
+		</div>		
+	</fieldset>
+	   
+<% end %>     

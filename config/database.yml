@@ -1,0 +1,20 @@
+development:
+  database: beast_dev
+  adapter:  mysql
+  host:     127.0.0.1
+  username: root
+  password:                   
+  
+test:
+  database: mole_test
+  adapter:  mysql
+  host:     127.0.0.1
+  username: root
+  password:   
+
+production:
+  database: mole_prod
+  adapter:  mysql
+  host:     127.0.0.1
+  username: root
+  password:                   

@@ -1,0 +1,22 @@
+<% timestamp = Time.gm( 2007, "apr", 27, 6, 30 ).strftime( "%Y-%m-%d %H:%M:%S" ) %>
+
+all:
+  id:   1
+  name: All
+  created_at: <%= timestamp %>   
+  updated_at: <%= timestamp %>
+perf:
+  id:   2
+  name: Performance
+  created_at: <%= timestamp %>
+  updated_at: <%= timestamp %>
+exception:
+  id:   3
+  name: Exception
+  created_at: <%= timestamp %>
+  updated_at: <%= timestamp %>
+forums_show:
+  id:   4
+  name: ForumsController:Show
+  created_at: <%= timestamp %>
+  updated_at: <%= timestamp %>
